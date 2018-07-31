@@ -9,7 +9,8 @@
 import UIKit
 
 class DocumentViewController: UIViewController {
-        
+    
+    @IBOutlet weak var textView: UITextView!
     var document: UIDocument?
     
     override func viewWillAppear(_ animated: Bool) {
