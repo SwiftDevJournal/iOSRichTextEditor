@@ -16,6 +16,7 @@
 		4D04F7092110D2E90018A1BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D04F7072110D2E90018A1BC /* LaunchScreen.storyboard */; };
 		4D04F7142110D2E90018A1BC /* iOSRichTextEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04F7132110D2E90018A1BC /* iOSRichTextEditorTests.swift */; };
 		4D04F71F2110D2E90018A1BC /* iOSRichTextEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04F71E2110D2E90018A1BC /* iOSRichTextEditorUITests.swift */; };
+		4D04F7312110DB360018A1BC /* New Document.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D04F7302110DB360018A1BC /* New Document.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4D04F71A2110D2E90018A1BC /* iOSRichTextEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSRichTextEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D04F71E2110D2E90018A1BC /* iOSRichTextEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSRichTextEditorUITests.swift; sourceTree = "<group>"; };
 		4D04F7202110D2E90018A1BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D04F7302110DB360018A1BC /* New Document.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "New Document.rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				4D04F6FE2110D2E80018A1BC /* DocumentViewController.swift */,
 				4D04F7002110D2E80018A1BC /* Document.swift */,
 				4D04F7022110D2E80018A1BC /* Main.storyboard */,
+				4D04F7302110DB360018A1BC /* New Document.rtf */,
 				4D04F7052110D2E90018A1BC /* Assets.xcassets */,
 				4D04F7072110D2E90018A1BC /* LaunchScreen.storyboard */,
 				4D04F70A2110D2E90018A1BC /* Info.plist */,
@@ -238,6 +241,7 @@
 				4D04F7092110D2E90018A1BC /* LaunchScreen.storyboard in Resources */,
 				4D04F7062110D2E90018A1BC /* Assets.xcassets in Resources */,
 				4D04F7042110D2E80018A1BC /* Main.storyboard in Resources */,
+				4D04F7312110DB360018A1BC /* New Document.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
