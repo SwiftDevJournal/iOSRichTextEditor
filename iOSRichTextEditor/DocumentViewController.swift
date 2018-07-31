@@ -8,10 +8,10 @@
 
 import UIKit
 
-class DocumentViewController: UIViewController {
+class DocumentViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var textView: UITextView!
-    var document: UIDocument?
+    var document: Document?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -20,7 +20,7 @@ class DocumentViewController: UIViewController {
         document?.open(completionHandler: { (success) in
             if success {
                 // Display the content of the document, e.g.:
-                
+                self.textView.attributedText = self.document?.text
             } else {
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
             }
@@ -31,5 +31,9 @@ class DocumentViewController: UIViewController {
         dismiss(animated: true) {
             self.document?.close(completionHandler: nil)
         }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        document?.text = textView.attributedText
     }
 }
