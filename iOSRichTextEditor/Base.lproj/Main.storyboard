@@ -32,24 +32,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-IC-g0u">
-                                <rect key="frame" x="140" y="28" width="100" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-IC-g0u">
+                                <rect key="frame" x="360.5" y="28" width="47" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="tii-l3-jey"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="dismissDocumentViewController" destination="M2k-L8-Olo" eventType="touchUpInside" id="Hqu-HM-7pb"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9MA-LB-HWQ">
-                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9MA-LB-HWQ">
+                                <rect key="frame" x="0.0" y="74" width="768" height="950"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WAb-IC-g0u" firstAttribute="top" secondItem="BoZ-jc-2Y8" secondAttribute="top" constant="8" id="3wH-gJ-QDv"/>
+                            <constraint firstItem="9MA-LB-HWQ" firstAttribute="top" secondItem="WAb-IC-g0u" secondAttribute="bottom" constant="10" id="Bnb-39-XVj"/>
+                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="bottom" secondItem="9MA-LB-HWQ" secondAttribute="bottom" id="MPX-al-Ktz"/>
+                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="trailing" secondItem="9MA-LB-HWQ" secondAttribute="trailing" id="Yhs-vr-kja"/>
+                            <constraint firstItem="WAb-IC-g0u" firstAttribute="centerX" secondItem="SIE-Uh-Zny" secondAttribute="centerX" id="bo1-JH-95C"/>
+                            <constraint firstItem="9MA-LB-HWQ" firstAttribute="leading" secondItem="BoZ-jc-2Y8" secondAttribute="leading" id="yBg-cn-Si0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BoZ-jc-2Y8"/>
                     </view>
                     <connections>
