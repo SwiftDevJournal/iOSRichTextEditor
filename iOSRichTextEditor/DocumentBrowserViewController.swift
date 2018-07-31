@@ -32,7 +32,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     // MARK: UIDocumentBrowserViewControllerDelegate
     
     func documentBrowser(_ controller: UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler importHandler: @escaping (URL?, UIDocumentBrowserViewController.ImportMode) -> Void) {
-        let newDocumentURL: URL? = nil
+        let newDocumentURL = Bundle.main.url(forResource: "New Document", withExtension: "rtf")
         
         // Set the URL for the new document here. Optionally, you can present a template chooser before calling the importHandler.
         // Make sure the importHandler is always called, even if the user cancels the creation request.
