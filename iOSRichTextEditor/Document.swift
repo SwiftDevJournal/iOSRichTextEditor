@@ -10,17 +10,17 @@ import UIKit
 
 class Document: UIDocument {
     
-    var text = NSAttributedString(string: "")
+    var text: NSAttributedString? = nil
     
     override func contents(forType typeName: String) throws -> Any {
         // Encode your document with an instance of NSData or NSFileWrapper
-        return NSKeyedArchiver.archivedData(withRootObject: text)
+        return NSKeyedArchiver.archivedData(withRootObject: text ?? "")
     }
     
     override func load(fromContents contents: Any, ofType typeName: String?) throws {
         // Load your document from contents
         if let data = contents as? Data {
-            text = NSKeyedUnarchiver.unarchiveObject(with: data) as! NSAttributedString
+            text = NSKeyedUnarchiver.unarchiveObject(with: data) as? NSAttributedString
         }
         
     }
