@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9MA-LB-HWQ">
-                                <rect key="frame" x="0.0" y="74" width="768" height="950"/>
+                                <rect key="frame" x="16" y="74" width="732" height="940"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -54,10 +54,10 @@
                         <constraints>
                             <constraint firstItem="WAb-IC-g0u" firstAttribute="top" secondItem="BoZ-jc-2Y8" secondAttribute="top" constant="8" id="3wH-gJ-QDv"/>
                             <constraint firstItem="9MA-LB-HWQ" firstAttribute="top" secondItem="WAb-IC-g0u" secondAttribute="bottom" constant="10" id="Bnb-39-XVj"/>
-                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="bottom" secondItem="9MA-LB-HWQ" secondAttribute="bottom" id="MPX-al-Ktz"/>
-                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="trailing" secondItem="9MA-LB-HWQ" secondAttribute="trailing" id="Yhs-vr-kja"/>
+                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="bottom" secondItem="9MA-LB-HWQ" secondAttribute="bottom" constant="10" id="MPX-al-Ktz"/>
+                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="trailing" secondItem="9MA-LB-HWQ" secondAttribute="trailing" constant="20" id="Yhs-vr-kja"/>
                             <constraint firstItem="WAb-IC-g0u" firstAttribute="centerX" secondItem="SIE-Uh-Zny" secondAttribute="centerX" id="bo1-JH-95C"/>
-                            <constraint firstItem="9MA-LB-HWQ" firstAttribute="leading" secondItem="BoZ-jc-2Y8" secondAttribute="leading" id="yBg-cn-Si0"/>
+                            <constraint firstItem="9MA-LB-HWQ" firstAttribute="leading" secondItem="BoZ-jc-2Y8" secondAttribute="leading" constant="16" id="yBg-cn-Si0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BoZ-jc-2Y8"/>
                     </view>
