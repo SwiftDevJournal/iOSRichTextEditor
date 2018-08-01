@@ -14,14 +14,15 @@ class Document: UIDocument {
     
     override func contents(forType typeName: String) throws -> Any {
         // Encode your document with an instance of NSData or NSFileWrapper
-        return NSKeyedArchiver.archivedData(withRootObject: text ?? "")
+        guard let text = text else { return Data() }
+        return NSKeyedArchiver.archivedData(withRootObject: text)
     }
     
     override func load(fromContents contents: Any, ofType typeName: String?) throws {
         // Load your document from contents
-        if let data = contents as? Data {
-            text = NSKeyedUnarchiver.unarchiveObject(with: data) as? NSAttributedString
-        }
+        guard let data = contents as? Data else { return }
+        guard let fileContents = NSKeyedUnarchiver.unarchiveObject(with: data) as? NSAttributedString else { return }
+        text = fileContents
         
     }
 }
