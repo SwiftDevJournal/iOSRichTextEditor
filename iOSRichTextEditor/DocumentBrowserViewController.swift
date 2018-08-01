@@ -37,7 +37,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         // Set the URL for the new document here. Optionally, you can present a template chooser before calling the importHandler.
         // Make sure the importHandler is always called, even if the user cancels the creation request.
         if newDocumentURL != nil {
-            importHandler(newDocumentURL, .move)
+            importHandler(newDocumentURL, .copy)
         } else {
             importHandler(nil, .none)
         }
