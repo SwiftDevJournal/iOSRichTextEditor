@@ -45,7 +45,7 @@ class DocumentViewController: UIViewController, UITextViewDelegate {
         document?.updateChangeCount(.done)
     }
     
-    
+    // Notification handling functions
     @objc func keyboardWasShown(notification: NSNotification) {
         // Scroll the text view so the keyboard doesn't block what's being typed.
         let info = notification.userInfo
