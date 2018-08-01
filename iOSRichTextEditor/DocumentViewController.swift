@@ -35,5 +35,6 @@ class DocumentViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         document?.text = textView.attributedText
+        document?.updateChangeCount(.done)
     }
 }
