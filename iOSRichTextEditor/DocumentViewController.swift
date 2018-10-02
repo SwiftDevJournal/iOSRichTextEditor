@@ -29,9 +29,9 @@ class DocumentViewController: UIViewController, UITextViewDelegate {
     }
     
     func registerForNotifications() {
-        NotificationCenter.default.addObserver(self, selector:#selector(DocumentViewController.keyboardWasShown(notification:)), name:NSNotification.Name.UIKeyboardDidShow, object:nil)
-        NotificationCenter.default.addObserver(self, selector:#selector(DocumentViewController.keyboardWillBeHidden(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object:nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(DocumentViewController.preferredContentSizeChanged(notification:)), name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(DocumentViewController.keyboardWasShown(notification:)), name:UIResponder.keyboardDidShowNotification, object:nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(DocumentViewController.keyboardWillBeHidden(notification:)), name:UIResponder.keyboardWillHideNotification, object:nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DocumentViewController.preferredContentSizeChanged(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
     
     @IBAction func dismissDocumentViewController() {
@@ -49,9 +49,9 @@ class DocumentViewController: UIViewController, UITextViewDelegate {
     @objc func keyboardWasShown(notification: NSNotification) {
         // Scroll the text view so the keyboard doesn't block what's being typed.
         let info = notification.userInfo
-        if let keyboardRect = info?[UIKeyboardFrameBeginUserInfoKey] as? CGRect {
+        if let keyboardRect = info?[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect {
             let keyboardSize = keyboardRect.size
-            textView.contentInset = UIEdgeInsetsMake(0, 0, keyboardSize.height, 0)
+            textView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
             textView.scrollIndicatorInsets = textView.contentInset
         }
         
@@ -63,6 +63,6 @@ class DocumentViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc func preferredContentSizeChanged(notification: NSNotification) {
-        textView.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        textView.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
     }
 }
