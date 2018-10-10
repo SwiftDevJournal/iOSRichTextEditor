@@ -198,7 +198,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Me and Mark Publishing";
+				ORGANIZATIONNAME = "Swift Dev Journal";
 				TargetAttributes = {
 					4D04F6F62110D2E80018A1BC = {
 						CreatedOnToolsVersion = 9.4.1;
