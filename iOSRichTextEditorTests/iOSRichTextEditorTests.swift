@@ -3,7 +3,7 @@
 //  iOSRichTextEditorTests
 //
 //  Created by mark on 7/31/18.
-//  Copyright © 2018 Me and Mark Publishing. All rights reserved.
+//  Copyright © 2018 Swift Dev Journal. All rights reserved.
 //
 
 import XCTest
