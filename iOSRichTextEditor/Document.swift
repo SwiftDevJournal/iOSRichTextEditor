@@ -14,8 +14,8 @@ class Document: UIDocument {
     
     override func contents(forType typeName: String) throws -> Any {
         // Encode your document with an instance of NSData or NSFileWrapper
-        guard let text = text else { return Data() }
-        return NSKeyedArchiver.archivedData(withRootObject: text)
+        guard let textToSave = text else { return Data() }
+        return NSKeyedArchiver.archivedData(withRootObject: textToSave)
     }
     
     override func load(fromContents contents: Any, ofType typeName: String?) throws {
