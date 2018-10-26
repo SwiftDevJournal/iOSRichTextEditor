@@ -1,3 +1,6 @@
 # iOSRichTextEditor
 
-A work in progress for learning how to work with UIDocument.
+This is a simple text editor to accompany the following article:
+
+[Creating Document-Based iOS Apps](https://swiftdevjournal.com/creating-document-based-ios-apps-part-2-make-a-text-editor/)
+
