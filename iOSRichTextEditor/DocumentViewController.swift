@@ -51,7 +51,7 @@ class DocumentViewController: UIViewController, UITextViewDelegate {
         let info = notification.userInfo
         if let keyboardRect = info?[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect {
             let keyboardSize = keyboardRect.size
-            textView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+            textView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
             textView.scrollIndicatorInsets = textView.contentInset
         }
         
